@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pra Você, Amor 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(-45deg, #2c003e, #4b0082, #8e24aa, #6a1b9a);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* 💓 Corações subindo de fundo */
+    .floating-hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .heart-float {
+      position: absolute;
+      bottom: -40px;
+      width: 20px;
+      height: 20px;
+      background: #ff80ab88;
+      transform: rotate(45deg);
+      animation: rise 8s linear infinite;
+    }
+
+    .heart-float::before,
+    .heart-float::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff80ab88;
+      border-radius: 50%;
+    }
+
+    .heart-float::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart-float::after {
+      left: 10px;
+      top: 0;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) scale(0.8) rotate(45deg);
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.2) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .heart {
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background: #ff80ab33;
+      transform: rotate(-45deg);
+      animation: pulse 2s infinite;
+      top: 20px;
+      right: 20px;
+      z-index: 1;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background: #ff80ab33;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 50px;
+      top: 0;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1) rotate(-45deg); opacity: 0.4; }
+      50% { transform: scale(1.1) rotate(-45deg); opacity: 0.8; }
+      100% { transform: scale(1) rotate(-45deg); opacity: 0.4; }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 24px;
+      max-width: 360px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      backdrop-filter: blur(12px);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .photo-container {
+      width: 100%;
+      height: 200px;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(255, 128, 171, 0.3);
+    }
+
+    .photo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.4em;
+      color: #f5caff;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 1em;
+      color: #ddd;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .download-button {
+      background: #d500f9;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      transition: all 0.3s ease;
+      display: inline-block;
+      box-shadow: 0 0 10px #d500f980, 0 0 20px #ea80fc40;
+    }
+
+    .download-button:hover {
+      background: #ea80fc;
+      box-shadow: 0 0 14px #ea80fc, 0 0 25px #f0629222;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.8em;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <!-- Corações flutuando -->
+  <div class="floating-hearts">
+    <!-- Vários corações com posições e delays diferentes -->
+    <div class="heart-float" style="left: 20%; animation-delay: 0s;"></div>
+    <div class="heart-float" style="left: 50%; animation-delay: 2s;"></div>
+    <div class="heart-float" style="left: 80%; animation-delay: 4s;"></div>
+    <div class="heart-float" style="left: 35%; animation-delay: 1s;"></div>
+    <div class="heart-float" style="left: 70%; animation-delay: 3s;"></div>
+  </div>
+
+  <!-- Coração fixo animado -->
+  <div class="heart"></div>
+
+  <!-- Cartão principal -->
+  <div class="card">
+    <div class="photo-container">
+      <img src="/446b21a4-2325-4992-a713-674912eec9be.jpg" alt="Nós dois 💜">
+    </div>
+    <h1>Pra você, meu amor 💘</h1>
+    <p>
+      Porque você ama listas, e eu amo ver você feliz.<br>
+      Esse app é um pedacinho do meu carinho por você.
+    </p>
+    <a href="LINK_DO_APP.apk" class="download-button" download>Baixar App 💾</a>
+    <footer>Feito com todo amor do mundo por você 💜</footer>
+  </div>
+</body>
+</html>
